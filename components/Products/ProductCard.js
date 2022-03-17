@@ -1,12 +1,13 @@
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
+
+const productImage = { uri : 'https://nmp.com.pk/admin/products/1637143879.jpg' }
 
 const ProductCard = () => {
   return (
     <View style={styles.productCard}>
-      <View style={styles.imgBox}>
+      <Image source={productImage} style={styles.imgBox} />
 
-      </View>
       <View style={styles.productDetails}>
           <Text style={{ fontSize: 17, fontWeight: '500' }}>Mask</Text>
           <Text style={{ color: "#274888", fontWeight: '700' }}>Rs. 1000</Text>
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
     addButton: {
         alignItems: 'center',
         padding: 10,
-        backgroundColor: '#d52324',
+        backgroundColor: '#c14752',
         borderRadius: 18,
     }
 })

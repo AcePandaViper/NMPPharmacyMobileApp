@@ -1,9 +1,10 @@
 import { StyleSheet, TextInput, View } from 'react-native'
+import Ionicon from 'react-native-vector-icons/Ionicons'
 import React from 'react'
 
 const Search = () => {
   return (
-    <View style={{margin: 10}}>
+    <View style={styles.container}>
       <TextInput
         style={styles.SearchInput}
         placeholder={'Search'}
@@ -15,6 +16,10 @@ const Search = () => {
 export default Search
 
 const styles = StyleSheet.create({
+  container: {
+    margin: 10,
+  },
+
   SearchInput: {
     width: 300,
     padding: 10,
@@ -29,5 +34,6 @@ const styles = StyleSheet.create({
     elevation: 5,
     borderRadius: 15,
     marginHorizontal: 25,
+    
   },
 })
