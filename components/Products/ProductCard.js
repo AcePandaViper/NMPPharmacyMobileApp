@@ -8,10 +8,10 @@ const ProductCard = () => {
 
       </View>
       <View style={styles.productDetails}>
-          <Text>Mask</Text>
-          <Text style={styles.productPrice}>Rs. 1000</Text>
+          <Text style={{ fontSize: 17, fontWeight: '500' }}>Mask</Text>
+          <Text style={{ color: "#274888", fontWeight: '700' }}>Rs. 1000</Text>
       </View>
-      <TouchableOpacity style={styles.addButton}><Text>Add to cart</Text></TouchableOpacity>
+      <TouchableOpacity style={styles.addButton}><Text style={{ color: '#fff' }}>Add to cart</Text></TouchableOpacity>
     </View>
   )
 }
@@ -27,17 +27,17 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         borderRadius: 10,
     },
-    imgBox: {
-        backgroundColor: '#FF5733',
-        height: '70%',
+    productDetails: {
+      alignItems: 'center'
     },
-    productPrice: {
-        left: '60%',
+    imgBox: {
+        backgroundColor: '#d52324',
+        height: '70%',
     },
     addButton: {
         alignItems: 'center',
         padding: 10,
-        backgroundColor: '#FF5733',
+        backgroundColor: '#d52324',
         borderRadius: 18,
     }
 })

@@ -16,6 +16,8 @@ export default Search
 
 const styles = StyleSheet.create({
   SearchInput: {
+    width: 300,
+    padding: 10,
     backgroundColor: '#ffffff',
     shadowColor: '#000',
     shadowOffset: {
