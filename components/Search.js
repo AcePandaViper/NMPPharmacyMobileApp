@@ -23,17 +23,7 @@ const styles = StyleSheet.create({
   SearchInput: {
     width: 300,
     padding: 10,
-    backgroundColor: '#ffffff',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
+    backgroundColor: '#FFFFFF',
     borderRadius: 15,
-    marginHorizontal: 25,
-    
   },
 })

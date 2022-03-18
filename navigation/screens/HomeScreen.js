@@ -21,18 +21,22 @@ const HomeScreen = (navigation) => {
         </ImageBackground>
       </View>
 
-      <TouchableOpacity style={styles.uploadPrescription}>
-        <Ionicons name='camera-outline' size={30} color='#fff' />
-        <Text style={{ color: '#fff', fontWeight: 'bold' }}>Upload Your Prescription</Text>
-      </TouchableOpacity>
-
-      <Text>Shop by Category</Text>
-
       <ScrollView>
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        <View style={{ alignItems: 'center', }}>
+          <TouchableOpacity style={styles.uploadPrescription}>
+            <Ionicons name='camera-outline' size={30} color='#fff' style={{ paddingHorizontal: 8 }} />
+            <Text style={{ color: '#fff', fontWeight: 'bold' }}>Upload Your Prescription</Text>
+          </TouchableOpacity>
+        </View>
+
+
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} >
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+        </ScrollView>
+
       </ScrollView>
 
     </View>
@@ -71,13 +75,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  
+
   uploadPrescription: {
     alignItems: 'center',
+    justifyContent: 'center',
     flexDirection: 'row',
+    width: 280,
     backgroundColor: '#34b3f6',
-    padding: 20,
-    margin: 20,
+    padding: 10,
+    margin: 10,
     borderRadius: 12,
     shadowColor: "#000",
     shadowOffset: {

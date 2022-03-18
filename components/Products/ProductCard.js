@@ -9,7 +9,7 @@ const ProductCard = () => {
       <Image source={productImage} style={styles.imgBox} />
 
       <View style={styles.productDetails}>
-          <Text style={{ fontSize: 17, fontWeight: '500' }}>Mask</Text>
+          <Text style={{ color: '#000000', fontSize: 17, fontWeight: '500' }}>Mask</Text>
           <Text style={{ color: "#274888", fontWeight: '700' }}>Rs. 1000</Text>
       </View>
       <TouchableOpacity style={styles.addButton}><Text style={{ color: '#fff' }}>Add to cart</Text></TouchableOpacity>
@@ -21,7 +21,7 @@ export default ProductCard
 
 const styles = StyleSheet.create({
     productCard: {
-        margin: 20,
+        margin: 5,
         padding: 8,
         width: 180,
         height: 270,
