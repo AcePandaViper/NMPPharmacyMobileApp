@@ -3,6 +3,7 @@ import React from 'react'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import Search from '../../components/Search'
 import ProductCard from '../../components/Products/ProductCard'
+import CategoryCard from '../../components/Categories/CategoryCard'
 
 const image = { uri: "https://img.freepik.com/free-vector/pharmacy-online-store-banner_107791-2192.jpg" }
 
@@ -28,7 +29,17 @@ const HomeScreen = (navigation) => {
             <Text style={{ color: '#fff', fontWeight: 'bold' }}>Upload Your Prescription</Text>
           </TouchableOpacity>
         </View>
+        
+        <Text style={{ fontSize: 15, fontWeight: '500', paddingHorizontal: 10, paddingVertical: 5,  }}>Shop by Category</Text>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} >
+          <CategoryCard />
+          <CategoryCard />
+          <CategoryCard />
+          <CategoryCard />
+          <CategoryCard />
+        </ScrollView>
 
+        <Text style={{ fontSize: 15, fontWeight: '500', paddingHorizontal: 10, paddingVertical: 5,  }}>Products</Text>
 
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} >
           <ProductCard />
