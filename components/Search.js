@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   },
 
   SearchInput: {
-    width: 300,
+    width: 250,
     padding: 10,
     backgroundColor: '#FFFFFF',
     borderRadius: 15,

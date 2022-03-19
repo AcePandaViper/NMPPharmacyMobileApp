@@ -5,32 +5,40 @@ import Search from '../../components/Search'
 import ProductCard from '../../components/Products/ProductCard'
 import CategoryCard from '../../components/Categories/CategoryCard'
 
-const image = { uri: "https://img.freepik.com/free-vector/pharmacy-online-store-banner_107791-2192.jpg" }
+const image = { uri: "https://media.istockphoto.com/vectors/frame-on-the-theme-of-health-medical-equipment-notebook-and-tablets-vector-id1189195717?k=20&m=1189195717&s=170667a&w=0&h=cRR6Wmhb1DDdX4yHbyxBZsN8ckbo17m2svItAdrbjvg=" }
 
 const HomeScreen = (navigation) => {
   return (
     <View style={styles.container}>
 
       <StatusBar
-        backgroundColor="#ffffff"
+        backgroundColor="#92dff1"
         barStyle="dark-content"
       />
 
       <View style={styles.headerContainer}>
         <ImageBackground source={image} resizeMode="cover" style={styles.headerContainerStyle}>
-          <Search />
+          <View style={styles.header}>
+            <View style={{ flexDirection: 'row', left: 25 }}>
+              <Text style={{ color: '#e91f27', fontWeight: '700', fontSize: 25, fontStyle: 'italic' }}>NMP </Text>
+              <View style={{ backgroundColor: '#434193', paddingHorizontal: 5 }}>
+                <Text style={{ color: '#fff', fontWeight: '700', fontSize: 25 }}>Pharmacy</Text>
+              </View>
+            </View>
+            <Search />
+          </View>
         </ImageBackground>
       </View>
 
       <ScrollView>
-        <View style={{ alignItems: 'center', }}>
+        <View style={{ alignItems: 'center', marginTop: 15 }}>
           <TouchableOpacity style={styles.uploadPrescription}>
             <Ionicons name='camera-outline' size={30} color='#fff' style={{ paddingHorizontal: 8 }} />
             <Text style={{ color: '#fff', fontWeight: 'bold' }}>Upload Your Prescription</Text>
           </TouchableOpacity>
         </View>
-        
-        <Text style={{ fontSize: 15, fontWeight: '500', paddingHorizontal: 10, paddingVertical: 5,  }}>Shop by Category</Text>
+
+        <Text style={{ fontSize: 18, fontWeight: '500', paddingHorizontal: 10, paddingVertical: 5, color: '#000000' }}>Shop by Category</Text>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} >
           <CategoryCard />
           <CategoryCard />
@@ -39,7 +47,8 @@ const HomeScreen = (navigation) => {
           <CategoryCard />
         </ScrollView>
 
-        <Text style={{ fontSize: 15, fontWeight: '500', paddingHorizontal: 10, paddingVertical: 5,  }}>Products</Text>
+        <Text style={{ fontSize: 18, fontWeight: '500', paddingHorizontal: 10, paddingVertical: 5, color: '#000000' }}>Products
+        </Text>
 
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} >
           <ProductCard />
@@ -59,7 +68,7 @@ export default HomeScreen
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f1f1f1'
+    backgroundColor: '#cbf3fb'
   },
 
   headerContainer: {
@@ -83,8 +92,11 @@ const styles = StyleSheet.create({
     flex: 1,
     transform: [{ scaleX: 0.5 }],
     backgroundColor: 'yellow',
-    alignItems: 'center',
-    justifyContent: 'center',
+  },
+
+  header: {
+    top: 60,
+    left: 20,
   },
 
   uploadPrescription: {
@@ -92,7 +104,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flexDirection: 'row',
     width: 280,
-    backgroundColor: '#34b3f6',
+    backgroundColor: '#bb3838',
     padding: 10,
     margin: 10,
     borderRadius: 12,
